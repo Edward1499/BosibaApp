@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Listado de sucursales</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">Email</th>
+            <th scope="col">Descripcion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sucursal of sucursalesList">
+            <th scope="row">{{ sucursal.city }}</th>
+            <td>{{ sucursal.phone1 }}</td>
+            <td>{{ sucursal.email }}</td>
+            <td>{{ sucursal.description }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
