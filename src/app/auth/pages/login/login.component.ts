@@ -32,9 +32,8 @@ export class LoginComponent {
             Device: ''
         }
         this.authService.login(request)
-            .subscribe(data => {
-                    localStorage.setItem('token', data.token!);
-                    this.router.navigate(['/sucursales']);
+            .subscribe(() => {
+                this.router.navigate(['/sucursales']);
             },
             () => {
                 Swal.fire('Error', 'Usuario o contraseña incorrecta.', 'error')
